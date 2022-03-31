@@ -18,6 +18,10 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 body {
   font-family: 'Space Mono', monospace;
   font-size: 18px;
@@ -86,6 +90,22 @@ body {
   text-align: right;
 }
 
+.tip-form__input::-webkit-input-placeholder {
+  color: #b6cccc;
+}
+
+.tip-form__input::-moz-placeholder {
+  color: #b6cccc;
+}
+
+.tip-form__input:-ms-input-placeholder {
+  color: #b6cccc;
+}
+
+.tip-form__input::-ms-input-placeholder {
+  color: #b6cccc;
+}
+
 .tip-form__input::placeholder {
   color: #b6cccc;
 }
@@ -122,6 +142,22 @@ body {
   outline: none;
   border-color: #7daca8;
   background-color: #f3f8fb;
+}
+
+.tip-form__percents--custom::-webkit-input-placeholder {
+  color: #557879;
+}
+
+.tip-form__percents--custom::-moz-placeholder {
+  color: #557879;
+}
+
+.tip-form__percents--custom:-ms-input-placeholder {
+  color: #557879;
+}
+
+.tip-form__percents--custom::-ms-input-placeholder {
+  color: #557879;
 }
 
 .tip-form__percents--custom::placeholder {
