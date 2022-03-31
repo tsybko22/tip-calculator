@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="tip-calc">
+        <div class="tip-calc__calculation">
+          <form action="#" class="tip-calc__form tip-form" autocomplete="off">
+            <fieldset class="tip-form__element">
+              <label class="tip-form__label" for="bill">Bill</label>
+              <input class="tip-form__input" type="number" name="bill" placeholder="0" id="bill" />
+            </fieldset>
+            <fieldset class="tip-form__element tip-form__element--grid">
+              <legend class="tip-form__text">Select Tip %</legend>
+              <input
+                type="radio"
+                name="tip-percents"
+                value="5"
+                id="tip-5-percents"
+                class="tip-form__radio visually-hidden"
+              />
+              <label class="tip-form__percents" for="tip-5-percents">5%</label>
+              <input
+                type="radio"
+                name="tip-percents"
+                value="10"
+                id="tip-10-percents"
+                class="tip-form__radio visually-hidden"
+              />
+              <label class="tip-form__percents" for="tip-10-percents">10%</label>
+              <input
+                type="radio"
+                name="tip-percents"
+                value="15"
+                id="tip-15-percents"
+                class="tip-form__radio visually-hidden"
+              />
+              <label class="tip-form__percents" for="tip-15-percents">15%</label>
+              <input
+                type="radio"
+                name="tip-percents"
+                value="25"
+                id="tip-25-percents"
+                class="tip-form__radio visually-hidden"
+              />
+              <label class="tip-form__percents" for="tip-25-percents">25%</label>
+              <input
+                type="radio"
+                name="tip-percents"
+                value="50"
+                id="tip-50-percents"
+                class="tip-form__radio visually-hidden"
+              />
+              <label class="tip-form__percents" for="tip-50-percents">50%</label>
+              <input
+                type="number"
+                name="tip-percents"
+                placeholder="Custom"
+                id="tip-custom-percents"
+                class="tip-form__percents tip-form__percents--custom"
+              />
+            </fieldset>
+            <fieldset class="tip-form__element">
+              <label class="tip-form__label" for="number-of-people">Number of People</label>
+              <input
+                class="tip-form__input"
+                type="number"
+                name="number-of-people"
+                placeholder="0"
+                id="number-of-people"
+              />
+            </fieldset>
+          </form>
+        </div>
+        <div class="tip-calc__result">
+          <div class="tip-calc__holder">
+            <p class="tip-calc__desc">Tip Amount <span>/ person</span></p>
+            <span id="tip-amount" class="tip-calc__price">$0.00</span>
+          </div>
+          <div class="tip-calc__holder">
+            <p class="tip-calc__desc">Tip Amount <span>/ person</span></p>
+            <span id="total-price" class="tip-calc__price">$0.00</span>
+          </div>
+          <button class="tip-calc__btn">RESET</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
