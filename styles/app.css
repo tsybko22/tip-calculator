@@ -116,6 +116,18 @@ body {
   border-color: #7daca8;
 }
 
+.tip-form__input--bill {
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.tip-form__input--people {
+  background-image: url(../images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
 .tip-form__percents {
   display: inline-block;
   padding: 5px 0;
