@@ -63,32 +63,29 @@ const showResult = () => {
   totalAmountElem.textContent = `$${totalTipAmount.toFixed(DECIMAL_POINT)}`;
 };
 
-const setInputValidation = (input, minValue, maxValue) => {
+const setInputRangeValidation = (input, minValue, maxValue) => {
   if (input.validity.rangeOverflow) {
     input.setCustomValidity(`Choose between ${minValue} and ${maxValue}`);
-    input.classList.add('invalid-field');
     tipAmountElem.textContent = '$0.00';
     totalAmountElem.textContent = '$0.00';
   } else if (input.validity.rangeUnderflow) {
     input.setCustomValidity(`Choose between ${minValue} and ${maxValue}`);
-    input.classList.add('invalid-field');
     tipAmountElem.textContent = '$0.00';
     totalAmountElem.textContent = '$0.00';
   } else {
     input.setCustomValidity('');
-    input.classList.remove('invalid-field');
     showResult();
   }
   input.reportValidity();
 };
 
 billInput.addEventListener('input', (evt) => {
-  setInputValidation(evt.target, MIN_PRICE_VALUE, MAX_PRICE_VALUE);
+  setInputRangeValidation(evt.target, MIN_PRICE_VALUE, MAX_PRICE_VALUE);
 });
 
 numberOfPeopleInput.addEventListener('input', (evt) => {
   evt.target.value = evt.target.value.replace(/[^0-9]/g, '');
-  setInputValidation(evt.target, MIN_NUMBER_OF_PEOPLE, MAX_NUMBER_OF_PEOPLE);
+  setInputRangeValidation(evt.target, MIN_NUMBER_OF_PEOPLE, MAX_NUMBER_OF_PEOPLE);
 });
 
 customTipInput.addEventListener('input', (evt) => {
@@ -96,7 +93,7 @@ customTipInput.addEventListener('input', (evt) => {
     elem.checked = false;
   });
 
-  setInputValidation(evt.target, MIN_TIP_VALUE, MAX_TIP_VALUE);
+  setInputRangeValidation(evt.target, MIN_TIP_VALUE, MAX_TIP_VALUE);
 });
 
 tipPercentElems.forEach((elem) => {

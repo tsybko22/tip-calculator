@@ -44,10 +44,6 @@ body {
   overflow: hidden;
 }
 
-.invalid-field {
-  box-shadow: 0 0 5px #e93333;
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -92,6 +88,11 @@ body {
   background-color: #f3f8fb;
   color: #447676;
   text-align: right;
+}
+
+.tip-form__input:invalid,
+.tip-form__percents--custom:invalid {
+  box-shadow: 0 0 5px #e93333;
 }
 
 .tip-form__input::-webkit-input-placeholder {
