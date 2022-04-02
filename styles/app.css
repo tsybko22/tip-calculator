@@ -44,6 +44,10 @@ body {
   overflow: hidden;
 }
 
+.invalid-field {
+  box-shadow: 0 0 5px #e93333;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -136,9 +140,16 @@ body {
   background-color: #00474b;
   color: #ffffff;
   text-align: center;
+  cursor: pointer;
 }
 
-.tip-form__percents:hover {
+.tip-form__radio:checked + .tip-form__percents {
+  background-color: #26c2ad;
+  color: #00474b;
+}
+
+.tip-form__percents:focus,
+.tip-form__radio:focus + .tip-form__percents {
   background-color: #26c2ad;
   color: #00474b;
 }

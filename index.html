@@ -27,7 +27,17 @@
           <form action="#" class="tip-calc__form tip-form" autocomplete="off">
             <fieldset class="tip-form__element">
               <label class="tip-form__label" for="bill">Bill</label>
-              <input class="tip-form__input tip-form__input--bill" type="number" name="bill" placeholder="0" id="bill" />
+              <input
+                class="tip-form__input tip-form__input--bill"
+                type="number"
+                name="bill"
+                placeholder="0"
+                id="bill"
+                min="10"
+                max="100000"
+                step="any"
+                required
+              />
             </fieldset>
             <fieldset class="tip-form__element tip-form__element--grid">
               <legend class="tip-form__text">Select Tip %</legend>
@@ -77,6 +87,8 @@
                 placeholder="Custom"
                 id="tip-custom-percents"
                 class="tip-form__percents tip-form__percents--custom"
+                min="1"
+                max="100"
               />
             </fieldset>
             <fieldset class="tip-form__element">
@@ -85,8 +97,11 @@
                 class="tip-form__input tip-form__input--people"
                 type="number"
                 name="number-of-people"
-                placeholder="0"
                 id="number-of-people"
+                placeholder="0"
+                min="1"
+                max="10"
+                required
               />
             </fieldset>
           </form>
@@ -97,8 +112,8 @@
             <span id="tip-amount" class="tip-calc__price">$0.00</span>
           </div>
           <div class="tip-calc__holder">
-            <p class="tip-calc__desc">Tip Amount <span>/ person</span></p>
-            <span id="total-price" class="tip-calc__price">$0.00</span>
+            <p class="tip-calc__desc">Total Amount <span>/ person</span></p>
+            <span id="total-tip-amount" class="tip-calc__price">$0.00</span>
           </div>
           <button class="tip-calc__btn">RESET</button>
         </div>
