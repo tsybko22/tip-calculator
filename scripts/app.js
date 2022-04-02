@@ -87,6 +87,7 @@ billInput.addEventListener('input', (evt) => {
 });
 
 numberOfPeopleInput.addEventListener('input', (evt) => {
+  evt.target.value = evt.target.value.replace(/[^0-9]/g, '');
   setInputValidation(evt.target, MIN_NUMBER_OF_PEOPLE, MAX_NUMBER_OF_PEOPLE);
 });
 
