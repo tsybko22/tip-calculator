@@ -122,13 +122,13 @@ body {
 }
 
 .tip-form__input--bill {
-  background-image: url(../images/icon-dollar.svg);
+  background-image: url('../images/icon-dollar.svg');
   background-repeat: no-repeat;
   background-position: 10px center;
 }
 
 .tip-form__input--people {
-  background-image: url(../images/icon-person.svg);
+  background-image: url('../images/icon-person.svg');
   background-repeat: no-repeat;
   background-position: 10px center;
 }
