@@ -1,3 +1,5 @@
+'use strict';
+
 const tipFormElem = document.querySelector('.tip-form');
 const billInput = tipFormElem.querySelector('#bill');
 const numberOfPeopleInput = tipFormElem.querySelector('#number-of-people');
