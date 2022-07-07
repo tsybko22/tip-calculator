@@ -28,6 +28,10 @@ body {
   font-weight: 700;
   line-height: 1.5;
   background-color: #c5e4e7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .visually-hidden {
@@ -45,10 +49,6 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   padding: 15px 15px;
 }
 
